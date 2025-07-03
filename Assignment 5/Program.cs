@@ -14,22 +14,6 @@ namespace Assignment_5
             //By reference : A reference to the caller’s variable is passed; the method works with the original storage.
             //Changes inside the method reflect outside(except in, which is read‑only).
             #endregion
-
-            #region Q2 Write a c# Function that accept 4 parameters from user and return result of summation and subtracting of two numbers
-            static void ValueDemo()
-            {
-                int a = 10, b = 10;
-
-                IncrementByValue(a);   
-                IncrementByRef(ref b);  
-
-                Console.WriteLine($"a = {a}"); 
-                Console.WriteLine($"b = {b}"); 
-            }
-
-            static void IncrementByValue(int x) => x++;            
-            static void IncrementByRef(ref int x) => x++;
-            #endregion
         }
     }
 }
