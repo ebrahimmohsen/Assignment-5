@@ -89,6 +89,19 @@ namespace Assignment_5
             }
             #endregion
 
+            #region Q7
+            static string ChangeChar(string src, int index, char newChar)
+            {
+                if (index < 0 || index >= src.Length)
+                    throw new ArgumentOutOfRangeException(nameof(index));
+
+                char[] chars = src.ToCharArray();
+                chars[index] = newChar;
+                return new string(chars);
+            }
+
+            #endregion
+
         }
     }
 }
