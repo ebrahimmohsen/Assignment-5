@@ -58,7 +58,25 @@ namespace Assignment_5
             }
             #endregion
 
+            #region Q5 Create a function named MinMaxArray, to return the minimum and maximum values stored in an array, using reference parameters
+            static void MinMaxArray(int[] arr, ref int min, ref int max)
+            {
+                if (arr.Length == 0) throw new ArgumentException("Empty array");
 
+                min = max = arr[0];
+                foreach (int v in arr)
+                {
+                    if (v < min) min = v;
+                    if (v > max) max = v;
+                }
+            }
+
+            // Usage of it 
+            int[] data = { 7, 2, 10, -1, 9 };
+            int lo = 0, hi = 0;
+            MinMaxArray(data, ref lo, ref hi);
+            Console.WriteLine($"Min = {lo}, Max = {hi}");
+            #endregion
         }
     }
 }
