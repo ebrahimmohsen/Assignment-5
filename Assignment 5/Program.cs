@@ -27,6 +27,26 @@ namespace Assignment_5
             #endregion
 
 
+            #region Q3 Write a program in C# Sharp to create a function to calculate the sum of the individual digits of a given number.
+            static int SumDigits(int n)
+            {
+                n = Math.Abs(n);
+                int sum = 0;
+                while (n > 0)
+                {
+                    sum += n % 10;
+                    n /= 10;
+                }
+                return sum;
+            }
+
+            Console.Write("Enter a number: ");
+            int num = int.Parse(Console.ReadLine()!);
+            Console.WriteLine($"The sum of the digits of the number {num} is: {SumDigits(num)}");
+            #endregion
+
+
+
         }
     }
 }
