@@ -13,6 +13,22 @@ namespace Assignment_5
 
             //By reference : A reference to the caller’s variable is passed; the method works with the original storage.
             //Changes inside the method reflect outside(except in, which is read‑only).
+            
+            //Examaple
+            static void ValueDemo()
+            {
+                int a = 10, b = 10;
+
+                IncrementByValue(a);   // copy
+                IncrementByRef(ref b); // alias
+
+                Console.WriteLine($"a = {a}"); // 10
+                Console.WriteLine($"b = {b}"); // 11
+            }
+
+            static void IncrementByValue(int x) => x++;          // caller sees no change
+            static void IncrementByRef(ref int x) => x++;        // caller’s b is modified
+
             #endregion
 
 
@@ -101,6 +117,8 @@ namespace Assignment_5
             }
 
             #endregion
+
+
 
         }
     }
