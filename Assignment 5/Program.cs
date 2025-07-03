@@ -77,6 +77,18 @@ namespace Assignment_5
             MinMaxArray(data, ref lo, ref hi);
             Console.WriteLine($"Min = {lo}, Max = {hi}");
             #endregion
+
+
+            #region Q6 Create an iterative (non-recursive) function to calculate the factorial of the number specified as parameter
+            static long Factorial(int n)
+            {
+                if (n < 0) throw new ArgumentOutOfRangeException(nameof(n));
+                long result = 1;
+                for (int i = 2; i <= n; i++) result *= i;
+                return result;
+            }
+            #endregion
+
         }
     }
 }
