@@ -14,6 +14,19 @@ namespace Assignment_5
             //By reference : A reference to the caller’s variable is passed; the method works with the original storage.
             //Changes inside the method reflect outside(except in, which is read‑only).
             #endregion
+
+
+            #region Q2 Write a c# Function that accept 4 parameters from user and return result of summation and subtracting of two numbers
+            static (int sum, int diff) SumAndSubtract(int x, int y, int z, int w)
+            {
+                int sum = x + y;
+                int diff = z - w;
+                return (sum, diff);
+
+            }
+            #endregion
+
+
         }
     }
 }
